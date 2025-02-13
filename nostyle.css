@@ -41,5 +41,9 @@ body{
     background-color: antiquewhite;
     padding: 10px 25px;
     border-radius: 120px;
-    box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+    box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);   
+}
+
+#No_button{
+    transition: all 0.3s ease;
 }

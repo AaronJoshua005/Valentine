@@ -1,11 +1,42 @@
-function moveRandomEl(elm){
-    elm.style.position = "absolute"
-    elm.style.top = Math.floor(Math.random() * 90 + 5) + "%";
-    elm.style.left = Math.floor(Math.random() * 90 + 5) + "%";
+const noButton = document.getElementById("NO_button");
+
+let touches = 0;
+const maxTouch = 5;
+
+noButton.addEventListener("click", handleTouch);
+noButton.addEventListener("touchstart", handleTouch);
+
+function handleTouch(event){
+    event.preventDefault();
+    touches++;
+
+    if(touches >= maxTouch){
+
+        noButton.removeEventListener("click", handleTouch);
+        noButton.removeEventListener("touchstart", handleTouch);
+
+        noButton.href="no5.html";
+
+        noButton.textContent = "No";
+        noButton.style.backgroundColor = "blue";
+        noButton.style.cursor = "pointer";
+        
+        return;
+
+    }
+
+    moveButton();
+
 }
 
-const moveRandom = document.querySelector("#random-movement");
+function moveButton(){
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const buttonWidth = noButton.offsetWidth;
+    const buttonHeight = noButton.offsetHeight;
 
-moveRandom.addEventListener("mouseenter", function(e){
-    moveRandomEl(e,target)
-});
+    const left = Math.floor(Math.random() * (windowWidth - buttonWidth));
+    const top = Math.floor(Math.random() * (windowHeight - buttonHeight));
+
+    noButton.style.transform = `translate(${left}px, ${top}px)`;
+}
