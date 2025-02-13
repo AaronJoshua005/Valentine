@@ -35,8 +35,8 @@ function moveButton(){
     const buttonWidth = noButton.offsetWidth;
     const buttonHeight = noButton.offsetHeight;
 
-    const left = Math.floor(Math.random() * (windowWidth - buttonWidth));
-    const top = Math.floor(Math.random() * (windowHeight - buttonHeight));
+    const left = Math.floor(Math.random() * (90 + 90));
+    const top = Math.floor(Math.random() * (90 + 90));
 
-    noButton.style.transform = `translate(${left}px, ${top}px)`;
+    noButton.style.transform = `translate(${top}px, ${left}px)`;
 }
