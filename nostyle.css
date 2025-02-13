@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.container{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px;
+    color: black;
+}
+
+.container .tenor-gif-embed{
+    max-width: 200px;
+}
+
+.container .button{
+    font-family: sans-serif;
+    display: flex;
+    gap: 20px;    
+}
+
+.button a{
+    text-decoration: none;
+    color: black;
+    background-color: antiquewhite;
+    padding: 10px 25px;
+    border-radius: 120px;
+    box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+}
